@@ -1,34 +1,16 @@
-STTV - Svelte / Typescript / Tailwind / Vite Template
-=====================================================
+# Everlight Quest App
 
-Get up and running with Svelte, Typescript, Tailwind and Vite. Also includes testing setup using Jest.
+This is a work in progress.  As I write the lore and mechanics and randomness for the story I'm working on, these are helper functions designed for solo and writer inspiration.
 
-Installation
-------------
+## To Do List
 
-```
-npx degit "srmullen/sttv#main" my_app
-cd my_app
-npm install
-```
+- [ ] Remove unused DND generator code not used in Everlight Quest App
+- [ ] NPC Details updated to reflect Everlight changes
+- [ ] Update the Adventure Status
+- [ ]
 
-Scripts
--------
+## Other Notes
 
-### Start a development server
+### Software Used
 
-`npm run dev`
-
-### Run tests
-
-`npm run test`
-or
-`npm run test:watch`
-
-### Build the application
-
-`npm run build`
-
-### Serve the application
-
-`npm run serve`
+* STTV - Svelte / Typescript / Tailwind / Vite Template (srmullen/sttv)
