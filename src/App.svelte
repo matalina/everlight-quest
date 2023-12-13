@@ -1,47 +1,27 @@
-<script>
-  import { Router, Route, Link } from 'svelte-routing';
-  import Home from './components/pages/Home.svelte';
-  import Disclaimer from './components/ui/Disclaimer.svelte';
-  import ChangeLog from './components/pages/ChangeLog.svelte';
-  import Everlight from './components/pages/Everlight.svelte';
-
+<script lang="ts">
+  import { Router, Link, Route } from 'svelte-routing';
+  import Home from './pages/Home.svelte';
+  import GenerateNpc from './pages/GenerateNPC.svelte';
   export let url = '';
 </script>
 
-<div id="app" class="md:w-96 mx-auto">
-  <Router {url}>
-    <nav class="flex items-center w-full p-3">
-      <div class="flex-grow flex">
-        <Link to="/">
-          <div
-            class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
-          >
-            <i class="fa-solid fa-house" />
-          </div>
-        </Link>
-        <Link to="/everlight">
-          <div
-            class="py-2 px-3 border border-gray-900 text-gray-900 mr-2 focus:bg-gray-200 hover:bg-gray-200"
-          >
-          <i class="fa-sharp fa-regular fa-hexagon-image"></i>
-          </div>
-        </Link>
-      </div>
-      <Link class="text-xs text-gray-500 p-2" to="/change-log">
-        v1.231101.01
-      </Link>
+<Router {url}>
+  <header>
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/npc">NPC</Link>
     </nav>
-    <section>
-      <Route path="/" component={Home} />
-      <Route path="/everlight" component={Everlight} />
-      <Route path="/change-log" component={ChangeLog} />
-    </section>
-    <Disclaimer />
-  </Router>
-</div>
+  </header>
+  
+  <div id="main" class="text-3xl font-bold underline">
+    <Route path="/" component="{Home}"/>
+    <Route path="/npc" component="{GenerateNpc}"/>
+  </div>
+  
+  <footer></footer>
 
-<style lang="postcss">
-  .active {
-    @apply bg-gray-700 text-gray-100 border-gray-100;
-  }
+</Router>
+
+
+<style>
 </style>
